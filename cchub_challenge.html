@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CCHUB Calculator Challenge</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=content-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color: #efefef;">
+	<div class="container text-center mt-5">
+		<h1 class="mb-5">Simple Calculator</h1>
+		<div class="row text-center">
+			<div class="col-3">
+				<input type="text" class="form-control ml-4" id="first" placeholder="First value goes here">
+			</div>
+			<div class="col-6 mb-3">
+				<button class="btn btn-primary" value="+" onclick="operator(this);">+</button>
+				<button class="btn btn-primary" value="-" onclick="operator(this);">-</button>
+				<button class="btn btn-primary" value="*" onclick="operator(this);">*</button>
+				<button class="btn btn-primary" value="/" onclick="operator(this);">/</button>
+			</div>
+			<div class="col-3">
+				<input type="text" class="form-control ml-n4" id="second" placeholder="Second value goes here">
+			</div>
+			<div class="col-6 mx-auto">
+				<p class="mb-2">Result:</p>
+				<input type="text" class="form-control" id="result">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function operator(btn) {
+			var first;
+			var second;
+			var result;
+			switch (btn.value) {
+				case "+":
+					first = document.getElementById("first").value;
+					second = document.getElementById("second").value;
+					result = document.getElementById("result").value = (Number(first) + Number(second));
+					break;
+				case "-":
+					first = document.getElementById("first").value;
+					second = document.getElementById("second").value;
+					result = document.getElementById("result").value = (Number(first) - Number(second));
+					break;
+				case "/":
+					first = document.getElementById("first").value;
+					second = document.getElementById("second").value;
+					result = document.getElementById("result").value = (Number(first) / Number(second));
+					break;
+				case "*":
+					first = document.getElementById("first").value;
+					second = document.getElementById("second").value;
+					result = document.getElementById("result").value = (Number(first) * Number(second));
+					break;
+			}
+		}
+	</script>
+</body>
+</html>
