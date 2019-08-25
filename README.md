@@ -1,2 +1,3 @@
 # simpleCalculator
 A simple mundane calculator built with JavaScript...
+...it perfoms just the basic Mathematical operations
